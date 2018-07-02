@@ -43,7 +43,11 @@ class SingleSelectPopupWindow(private val context: Context, private val data: Li
         super.showAtLocation(parent, gravity, x, y)
     }
 
+    /**
+     * 仅供初次默认选择，不会调用点击事件
+     */
     fun setDefaultSelectPosition(position: Int) {
+        selectPosition = position
         adapter?.showItemSelected(position)
     }
 
@@ -53,7 +57,7 @@ class SingleSelectPopupWindow(private val context: Context, private val data: Li
         } else {
             notifyDataChange()
         }
-        adapter?.showItemSelected(selectPosition)
+        setDefaultSelectPosition(selectPosition)
     }
 
     private fun initContentView() {

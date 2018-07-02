@@ -79,7 +79,7 @@ abstract class DefaultSelectedAdapter(private val data: List<DefaultSelectedMode
 
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
         super.onAttachedToRecyclerView(recyclerView)
-        this.recyclerView = WeakReference<RecyclerView>(recyclerView)
+        this.recyclerView = WeakReference(recyclerView)
     }
 
     fun showItemSelected(position: Int) {
