@@ -92,9 +92,9 @@ class MultiStageSelectPopupWindow(private val context: Context, private val data
         } else {
             initTab()
             if (data.tabModel.isNullOrEmpty()) return
-            fillOneData(oldSelectedIndex[ONE])
+            fillOneData(oldSelectedIndex[TAB])
             if (data.tabModel[0].levelOneModel.isNullOrEmpty()) return
-            fillTwoData(oldSelectedIndex[ONE], oldSelectedIndex[TWO])
+            fillTwoData(oldSelectedIndex[TAB], oldSelectedIndex[ONE])
             tbTop?.getTabAt(oldSelectedIndex[TAB])?.select()
             adapterOne?.showItemSelected(oldSelectedIndex[ONE])
             if (beenSelected) {
