@@ -97,7 +97,9 @@ class MultiStageSelectPopupWindow(private val context: Context, private val data
             fillTwoData(oldSelectedIndex[ONE], oldSelectedIndex[TWO])
             tbTop?.getTabAt(oldSelectedIndex[TAB])?.select()
             adapterOne?.showItemSelected(oldSelectedIndex[ONE])
-            adapterTwo?.showItemSelected(oldSelectedIndex[TWO])
+            if (beenSelected) {
+                adapterTwo?.showItemSelected(oldSelectedIndex[TWO])
+            }
         }
     }
 
