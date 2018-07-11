@@ -137,7 +137,7 @@ class MultiStageSelectPopupWindow(private val context: Context, private val data
                 tabIndex = tab?.position ?: 0
                 clearAllIndex()
                 fillOneData(tabIndex)
-                fillTwoData(0, 0)
+                fillTwoData(tabIndex, 0)
                 notifyAllDataChange()
                 if (oldSelectedIndex[TAB] == tabIndex) {
                     rvOne?.scrollToPosition(oldSelectedIndex[ONE])
@@ -182,7 +182,7 @@ class MultiStageSelectPopupWindow(private val context: Context, private val data
                 clearAllIndex()
                 tabIndex = 0
                 fillOneData(tabIndex)
-                fillTwoData(0, 0)
+                fillTwoData(tabIndex, 0)
                 notifyAllDataChange()
                 rvOne?.scrollToPosition(0)
                 rvTwo?.scrollToPosition(0)
