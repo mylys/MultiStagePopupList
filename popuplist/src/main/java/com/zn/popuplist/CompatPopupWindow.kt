@@ -13,8 +13,8 @@ import android.widget.PopupWindow
  */
 open class CompatPopupWindow : PopupWindow() {
 
-    override fun showAsDropDown(anchor: View, xoff: Int, yoff: Int, gravity: Int) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+    override fun showAsDropDown(anchor: View?, xoff: Int, yoff: Int, gravity: Int) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N && anchor != null) {
             val rect = Rect()
             anchor.getGlobalVisibleRect(rect)
             val h = anchor.resources.displayMetrics.heightPixels - rect.bottom

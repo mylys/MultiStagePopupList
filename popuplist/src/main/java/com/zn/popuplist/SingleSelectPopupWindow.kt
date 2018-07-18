@@ -33,7 +33,7 @@ class SingleSelectPopupWindow(private val context: Context, private val data: Li
         }
     }
 
-    override fun showAsDropDown(anchor: View, xoff: Int, yoff: Int, gravity: Int) {
+    override fun showAsDropDown(anchor: View?, xoff: Int, yoff: Int, gravity: Int) {
         showPopupWindow()
         super.showAsDropDown(anchor, xoff, yoff, gravity)
     }

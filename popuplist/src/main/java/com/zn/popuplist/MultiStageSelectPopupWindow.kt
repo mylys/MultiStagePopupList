@@ -76,7 +76,7 @@ class MultiStageSelectPopupWindow(private val context: Context, private val data
         }
     }
 
-    override fun showAsDropDown(anchor: View, xoff: Int, yoff: Int, gravity: Int) {
+    override fun showAsDropDown(anchor: View?, xoff: Int, yoff: Int, gravity: Int) {
         showPopupWindow()
         super.showAsDropDown(anchor, xoff, yoff, gravity)
     }
